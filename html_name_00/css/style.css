@@ -85,11 +85,12 @@ a:visited{
     padding-top: 200px;
 }
 .catchcopy{
-    font-size: 30px;
-    margin-bottom: 30px;
+    font-size: 50px;
+    font-weight: bold;
+    padding-bottom: 20px;
 }
 .catchcopy_s{
-    font-size: 20px;
+    font-size: 38px;
 }
 /* end@1 */
 
