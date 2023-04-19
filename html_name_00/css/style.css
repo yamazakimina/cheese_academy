@@ -1,9 +1,22 @@
 /* ここから下に記載していく */
 @charset "utf-8";
-
+/* @start */
+#splash {
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  background:#FEC463;
+  text-align:center;
+  color:#fff;
+}
+/* end@start */
 /* @base */
-body{
+main{
     cursor: url(../img/cheese.png), auto;
+}
+.shrine{
+    cursor: url(../img/nezumin.png), auto;
 }
 .wrapper{
     min-width: 1200px;
@@ -95,9 +108,6 @@ a:visited{
 /* end@1 */
 
 /* @2 */
-.message{
-    padding: 40px;
-}
 #ABOUT h2{
     color: #f8b500;
 }
@@ -107,6 +117,9 @@ a:visited{
 .slide-items img{
     margin: 0 10px;
 }
+#ABOUT .section{
+    padding-top: 40px;
+  }
 /* end@2 */
 
 /* @3 */
@@ -208,6 +221,17 @@ h3{
     display: flex;
     justify-content: center;
 }
+.more-list li:nth-child(3n-1){
+    margin: 0 1%;
+}
+.btn_in{
+    transition: color 0.3s;
+    text-decoration: none;
+}
+.btn_in:hover{
+    opacity: 0.6;
+    transition: 0.3s;
+}
 /* end@4 */
 
 /* @5 */
@@ -239,7 +263,7 @@ td,th{
   .siru{
     display: flex;
   }
-  .item{    
+  .item_1{    
     padding-bottom: 8px;
     padding-top: 8px;
     display: flex;
@@ -274,7 +298,7 @@ td,th{
    height: 60px;
    display: flex;
    justify-content: center;
-   padding-bottom: 90px;
+   padding-bottom: 30px;
    padding-top: 30px;
  }
  .btn_out{
@@ -297,6 +321,111 @@ td,th{
   }
 /* end@6 */
 
+/* 7 */
+.shrine{
+    background-color: #fafafa;
+}
+.sanpai{
+    padding-bottom: 0px;
+}
+.torii{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.torii img{
+    width: 30%;
+    height: auto;
+}
+.btn_shrine{
+    display: flex;
+    justify-content: center;
+}
+#mybtn{
+    margin-bottom: 90px;
+    width: 300px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f8b500;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+}
+button{
+    transition: color 0.3s;
+    text-decoration: none;
+}
+button:hover{
+    opacity: 0.6;
+    transition: 0.3s;
+}
+.box-wrapper {
+    position: relative;
+    max-width: 1200px;
+    height: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .box {
+    width: 100%;
+  }
+  .sanpai{
+    padding-bottom: 40px;
+  }
+
+  /* 落ち葉 */
+  .item {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 15px;
+    height: 20px;
+    margin: 0 auto;
+    border-radius: 0% 70%;
+    background: #914928;
+    opacity: 0;
+  }
+  
+  @keyframes fall {
+    from {
+      opacity: 0;
+      top: -50px;
+    }
+  
+    20% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 1;
+      top: 100vh;
+    }
+  }
+  
+  @keyframes sway1 {
+    from {
+      transform: translate3d(0px, 0px, 0px) rotate(0deg);
+    }
+  
+    25% {
+      transform: translate3d(-50px, 0px, 0px) rotate(-10deg);
+    }
+  
+    75% {
+      transform: translate3d(50px, 0px, 0px) rotate(10deg);
+    }
+  
+    to {
+      transform: translate3d(0px, 0px, 0px) rotate(0deg);
+    }
+  }
+  .js-scroll-fall.is-animated .item {
+    animation: fall 4s linear forwards, sway1 4s ease-in-out alternate;
+  }
+/* @7 */
+
 /* fotter */
 footer{
     background-color: #707070;
@@ -305,3 +434,14 @@ footer{
     color: white;
 }
 /* end@footer */
+
+/* @smart phone */
+@media only screen and (max-width: 624px)  {
+.btn_more,.btn{
+     transition: transform .2s;
+ }
+.btn_more,.btn:active{
+     transform: scale(.95);
+}
+}
+/* end@smart phone */
